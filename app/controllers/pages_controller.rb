@@ -9,7 +9,14 @@ class PagesController < ApplicationController
   end
   #código back-end da pagina profile
   def profile
+    # Pegue a url do usuário através do id
+  if (User.find_by_username(params[:id]))
+    @username = params[:id]
+  else
+    redirect_to root_path, :notice=> "Usuário nã encontrado"
   end
+end
+
   #código back-end da pagina explore
   def explore
   end

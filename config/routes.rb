@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root 'pages#index'
   #Define as rotas para as páginas
   get '/home' => 'pages#home' # override default routes.
-  get '/perfil' => 'pages#perfil'
+  get '/user/:id' => 'pages#perfil'
   get '/explore' => 'pages#explore'
 
   # The priority is based upon order of creation: first created -> highest priority.
