@@ -14,11 +14,15 @@
         </div>
     </div>
     <div class="col-xs-6">
+      <%= render '/componentes/post_form' %>
+      
+      <% for @p in @posts %>
         <div class="panel panel-default">
           <div class="panel-body">
-        <p>tweets</p>
+        <p><%= @p.content %></p>
           </div>
         </div>
+      <% end %>
     </div>
     <div class="col-xs-3">
         <div class="panel panel-default">
@@ -26,15 +30,10 @@
         <p>Quem seguir</p>
           </div>
         </div>
-    </div>
-</div>
-<!--segunda parte da primeira coluna-->
-<div class="row">
-<div class="col-xs-3 col-xs-offset-9">
-        <div class="panel panel-default">
+         <div class="panel panel-default">
           <div class="panel-body">
         <p>Trends</p>
-          </div>
-        </div>
+      </div>
     </div>
+  </div>
 </div>
